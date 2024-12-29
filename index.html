@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cool fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cutive&family=Jost:ital,wght@0,100..900;1,100..900&family=Limelight&family=Poiret+One&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/universalstyles.css">
+    <link rel="stylesheet" href="./styles/shopfrontstyles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title>The Puzzle Parlour</title>
+</head>
+<body>
+    <div class="container">
+        <img id="shopfront" src="./images/shopfront.png" alt="Shopfront">
+        <div class="door" onclick="passwordPlease()"></div>
+
+        <div class="password-container hidden">
+            <div class="inner-container">
+                <h1 id="message">What cheese is made backwards?</h1>
+                <input id="password-input" value="" type="text">
+                <button id="input-btn">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./scripts/universalscript.js"></script>
+    <script src="./scripts/shopfrontscript.js"></script>
+</body>
+</html>
