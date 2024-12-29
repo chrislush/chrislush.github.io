@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cool fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cutive&family=Jost:ital,wght@0,100..900;1,100..900&family=Limelight&family=Poiret+One&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/universalstyles.css">
+    <link rel="stylesheet" href="./styles/frontroomstyles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title>The Puzzle Parlour</title>
+</head>
+<body>
+    <div class="container">
+        <img id="front-room" src="./images/frontroom.png" alt="Front Room">
+        <div class="newspaper interactive" onclick="sudokuPuzzle()"></div>
+        <div class="gramophone interactive" onclick="openMusicPlayer()"></div>
+        <div class="book interactive" onclick="pickUpBook()"></div>
+        <a id="mousetrap-link" href="https://chrislush.github.io/mousetrap"><div class="cheese interactive"></div></a>
+
+        <div id="clock-frame" class="interactive">
+            <canvas id="clock-canvas" width="400" height="400"  onclick="magnifyClock()"></canvas>
+            <div class="clock-close-btn"></div>
+        </div>
+        
+        <div class="autobiography hidden">
+            <input type="checkbox" id="checkbox-cover" class="hidden">
+            <input type="checkbox" id="checkbox-page1" class="hidden">
+            <input type="checkbox" id="checkbox-page2" class="hidden">
+            <input type="checkbox" id="checkbox-page3" class="hidden">
+            <div class="cover">
+                <div class="outer-cover">
+                    <label class="open" for="checkbox-cover"></label>
+                </div>
+                <div class="inner-cover">
+                    <label class="close" for="checkbox-cover"></label>
+                </div>
+            </div>
+            <div class="page" id="page1">
+                <div class="front-page">
+                    <div class="art-deco-container">
+                        <div class="tall"></div>
+                        <div class="mid"></div>
+                        <div class="wide"></div>
+                    </div>
+                    <div class="title-deco-container">
+                        <div class="content">
+                            <h1>Hello World</h1>
+                        </div>
+                        <div class="content-dot"></div>
+                        <div class="main-diamond-outer"></div>
+                        <div class="main-diamond-inner"></div>
+                    </div>
+                    <label class="next" for="checkbox-page1"><img src="./images/nextpage.png" alt="Hand pointing right"></label>
+                </div>
+                <div class="back-page">
+                    <div class="art-deco-container">
+                        <div class="tall"></div>
+                        <div class="mid"></div>
+                        <div class="wide"></div>
+                        <div class="content">
+                            <div id="ppf-div">
+                                <div id="ppf-inner-div"></div>
+                            </div>
+                            <div class="deco-divider-container">
+                                <div class="left-line"></div>
+                                <div class="right-line"></div>
+                                <div class="small-diamond-left"></div>
+                                <div class="small-diamond-right"></div>
+                                <div class="large-diamond"></div>
+                            </div>
+                            <h2>Christine Lush is my name, and I've a view to making web development my game</h2>
+                        </div>
+                    </div>
+                    <label class="prev" for="checkbox-page1"><img src="./images/prevpage.png" alt="Hand pointing left"></label>
+                </div>
+            </div>
+            <div class="page" id="page2">
+                <div class="front-page">
+                    <div class="art-deco-container">
+                        <div class="tall"></div>
+                        <div class="mid"></div>
+                        <div class="wide"></div>
+                        <div class="content"></div>
+                    </div>
+                    <label class="next" for="checkbox-page2"><img src="./images/nextpage.png" alt="Hand pointing right"></label>
+                </div>
+                <div class="back-page">
+                    <div class="art-deco-container">
+                        <div class="tall"></div>
+                        <div class="mid"></div>
+                        <div class="wide"></div>
+                        <div class="content">
+                            <p id="github-link">Click <a href="https://github.com/chrislush/chrislush.github.io">here</a> to be taken to the relevant GitHub repository</p>
+                        </div>
+                    </div>
+                    <label class="prev" for="checkbox-page2"><img src="./images/prevpage.png" alt="Hand pointing left"></label>
+                </div>
+            </div>
+            <div class="page attribution" id="page3">
+                <div class="front-page">
+                    <div class="art-deco-container">
+                        <div class="tall"></div>
+                        <div class="mid"></div>
+                        <div class="wide"></div>
+                        <div class="content">
+                            <h1>Music Attribution</h1>
+                            <p>Sailing Away by HoliznaCC0 sourced from <a href="https://freemusicarchive.org/">freemusicarchive.org</a>, licensed under a CC0 1.0 Universal License</p>
+                            <p>Barbara by U.S. Army Blues sourced from <a href="https://freemusicarchive.org/">freemusicarchive.org</a>, licensed under a Public Domain Mark 1.0 License</p>
+                            <p>Dance Of The Stargazer by U.S. Army Blues sourced from <a href="https://freemusicarchive.org/">freemusicarchive.org</a>, licensed under a Public Domain Mark 1.0 License</p>
+                            <p>Main Stem by U.S. Army Blues sourced from <a href="https://freemusicarchive.org/">freemusicarchive.org</a>, licensed under a Public Domain Mark 1.0 License</p>
+                            <p>Not On The Bus by U.S. Army Blues sourced from <a href="https://freemusicarchive.org/">freemusicarchive.org</a>, licensed under a Public Domain Mark 1.0 License</p>
+                            <p>Door creaking open by Glitchedtones sourced from <a href="https://uppbeat.io/">uppbeat.io</a></p>
+                        </div>
+                    </div>
+                    <label class="next" for="checkbox-page3"><img src="./images/nextpage.png" alt="Hand pointing right"></label>
+                </div>
+                <div class="back-page">
+                    <div class="art-deco-container">
+                        <div class="tall"></div>
+                        <div class="mid"></div>
+                        <div class="wide"></div>
+                        <div class="content">
+                            <h1>Image Attribution</h1>
+                            <p>Wood texture sourced from <a href="https://texturelabs.org/">texturelabs.org</a> under the name "Wood 189"</p>
+                            <p>Pointing hand sourced from <a href="https://freesvg.org/">freesvg.org</a> under the name "pointing hand", published by OpenClipart</p>
+                            <p>Curtains sourced from <a href="https://www.cleanpng.com/">cleanpng.com</a> under the name "Blue and Red Curtains", contributed by rechie</p>
+                            <p>Play button icon sourced from <a href="https://www.flaticon.com/">flaticon.com</a> under the name "Play buttton free icon", created by IYAHICON</p>
+                            <p>Pause button icon sourced from <a href="https://www.flaticon.com/">flaticon.com</a> under the name "Pause free icon", created by Chanut</p>
+                            <p>Sun face sourced from <a href="https://pngtree.com/">pngtree.com</a> under the name "Sun Face Black And White Personality Tattoo", designed by Mumuxi</p>
+                            <p>Art Deco book cover sourced from <a href="https://freepik.com/">freepik.com</a>, designed by Freepik</p>
+                        </div>
+                    </div>
+                    <label class="prev" for="checkbox-page3"><img src="./images/prevpage.png" alt="Hand pointing left"></label>
+                </div>
+            </div>
+            <div class="back-cover">
+                <a href="javascript:void(0)" class="book-close-btn" onclick="closeBook()">&times</a>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <canvas id="gramophone-canvas" width="100" height="100"></canvas>
+
+            <img id="left-curtain" src="./images/leftcurtain.png" alt="Curtain">
+            <img id="right-curtain" src="./images/rightcurtain.png" alt="Curtain">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeMusicPlayer()">&times;</a>
+
+            <div id="ui">
+                <div class="player-display">
+                    <h1 id="player-song-title"></h1>
+                    <h2 id="player-song-artist"></h2>
+                </div>
+
+                <div class="menu">
+                    <button id="play-btn"><img src="./images/play.png" alt="PLAY"></button>
+                    <button id="pause-btn"><img src="./images/pause.png" alt="PAUSE"></button>
+                </div>
+
+                <div id="record-container">
+                    <div id="record0" class="record"></div>
+                    <div id="record1" class="record"></div>
+                    <div id="record2" class="record"></div>
+                    <div id="record3" class="record"></div>
+                    <div id="record4" class="record"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sudoku-container hidden">
+            <h1>Sudoku</h1>
+            <p class="instructions">Complete the grid such that every row, column and 3x3 box contains the digits 1 to 9.</p>
+
+            <div id="diff">
+                <h3>Difficulty</h3>
+                <label for="diff-easy"><input id="diff-easy" type="radio" name="diff" value="easy" class="inline" checked>Easy</label>
+                <label for="diff-medium"><input id="diff-medium" type="radio" name="diff" value="medium" class="inline">Medium</label>
+                <label for="diff-hard"><input id="diff-hard" type="radio" name="diff" value="hard" class="inline">Hard</label>    
+            </div>
+            
+            <button id="start-btn">Start</button>
+            <h4 class="winning-message hidden">Capital!</h4>
+
+            <div class="board-container">
+                <div class="sudoku-board"></div>
+            </div>
+
+            <div class="number-container hidden">
+                <p id="1">1</p>
+                <p id="2">2</p>
+                <p id="3">3</p>
+                <p id="4">4</p>
+                <p id="5">5</p>
+                <p id="6">6</p>
+                <p id="7">7</p>
+                <p id="8">8</p>
+                <p id="9">9</p>
+            </div>
+
+            <a href="javascript:void(0)" class="sudoku-close-btn" onclick="closeSudoku()">&times</a>
+        </div>
+        
+        <canvas id="tom-canvas" width="150" height="128"></canvas>
+        <div id="tom-talk" class="dialogue hidden">
+            <div id="text-div">
+                <p>Why, hello there!</p>
+            </div>
+            <a href="javascript:void(0)" class="talk-next-btn" onclick="nextMessage()"><img src="/images/nextpage.png"></a>
+            <a href="javascript:void(0)" class="talk-close-btn hidden" onclick="endTalk()">&times;</a>
+        </div>
+
+        <div id="darkness">
+            <div id="panel">
+                <div id="elevation">
+                    <div id="switch">
+                        <div id="inner-switch" onclick="lightOn()"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="instructions" class="dialogue">
+                <p>Blimey! Bit dark in here, isn't it?</p>
+                <p>Go ahead and turn the light on for me, would you?</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="./scripts/universalscript.js"></script>
+    <script src="./scripts/frontroomscript.js"></script>
+    <script src="./scripts/clock.js"></script>
+    <script src="./scripts/gramophone.js"></script>
+    <script src="./scripts/sudoku.js"></script>
+</body>
+</html>

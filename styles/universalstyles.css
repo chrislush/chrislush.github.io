@@ -1,0 +1,49 @@
+:root {
+    --lightgold: #fff5bd;
+    --gold: #eac25c;
+    --mediumgold: #bb9b49;
+    --darkgold: #19170c;
+    --rose: #900c3f;
+    --parchment: #fcf5e5;
+    --mediumblue: #0051ed;
+    --darkblue: #000e29;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 2s;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 56%;
+    padding: 0;
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px var(--gold);
+}
+
+.container img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#shopfront, #front-room {
+    border-radius: 20px;
+}
+
+.interactive {
+    cursor: url(../images/investigativecursorzoom.png) 21 21, pointer;
+}

@@ -1,0 +1,111 @@
+.door {
+    position: absolute;
+    top: 48.3%;
+    right: 29%;
+    width: 12.1%;
+    height: 26.5%;
+    cursor: pointer;
+}
+
+.container .password-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: min(100vw, 410px);
+    height: 260px;
+    background-color: var(--gold);
+    mask-image: url(../images/outerborder.png);
+    mask-repeat: no-repeat;
+    image-rendering: pixelated;
+    user-select: none;
+}
+
+.password-container.hidden {
+    display: none;
+}
+
+.password-container .hidden {
+    display: none;
+}
+
+.container .password-container .inner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: var(--darkblue);
+    mask-image: url(../images/innerborder.png);
+    mask-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+#message.correct {
+    font-size: 60px;
+    width: 80%;
+    padding: 40px 0px;
+    margin: 28px 0px 32px;
+}
+
+#message.incorrect {
+    font-size: 60px;
+    margin: 65px 0px 15px;
+}
+
+#message {
+    margin: 45px 0px 5px;
+    font-size: 40px;
+    color: var(--gold);
+    text-align: center;
+    width: 60%;
+    font-family: "Smythe";
+}
+
+.container .password-container #password-input {
+    width: 240px;
+    height: 50px;
+    font-family: "Special Elite";
+    font-size: 26px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 0%;
+    border-color: var(--gold);
+    transition: 0.5s;
+    outline: none;
+    background-color: var(--gold);
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    padding-top: 7px;
+}
+
+.container .password-container #input-btn {
+    height: 45px;
+    font-family: "Smythe";
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--gold);
+    background-color: var(--darkblue);
+    border: 2px solid var(--gold);
+    margin-top: 0px;
+    margin-bottom: 38px;
+}
+
+.container .password-container #input-btn:hover {
+    background-color: var(--gold);
+    color: var(--darkblue);
+    cursor: pointer;
+}
+
+.container .password-container #input-btn.incorrect {
+    margin: 5px 0px 65px;
+}
