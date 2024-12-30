@@ -189,7 +189,7 @@
 
 #clock-frame {
     position: absolute;
-    top: 38.15%;
+    top: 38.35%;
     left: 47.55%;
     width: 4.45%;
 }
@@ -569,6 +569,7 @@
 
 #github-link a {
     color: var(--mediumblue);
+    cursor: url(../images/investigativecursorzoom.png) 21 21, pointer;
 }
 
 .open, .close {
