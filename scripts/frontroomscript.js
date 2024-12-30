@@ -65,7 +65,7 @@ let talkEnded = false;
 let walkLeftEnded = false;
 
 const messages = [
-    "<p>The name's Tom D'Auvergne, private investigator, and it's my distinct pleasure to welcome you to The Conundrum Club, London's premier hideaway for brainteaser buffs, enigma enthusiasts and all those who enjoy sharing in a good puzzle.</p>",
+    "<p>The name's Tom D'Auvergne, private investigator, and it's my distinct pleasure to welcome you to The Puzzle Parlour, London's premier hideaway for brainteaser buffs, enigma enthusiasts and all those who enjoy sharing in a good puzzle.</p>",
     "<p>I'm afraid the owner has been called away on urgent business, but as a regular here, I'm confident I can give you the lowdown on this place.</p>",
     "<p>Although, given the nature of this establishment, perhaps it would be more appropriate if I were to simply leave you to it?</p>",
     "<p>Yes, I think that's how we'll do it! Don't be shy now, puzzle fiend, take a good look around! Here, borrow my magnifying glass. It's seen me through some trying cases, and I've no doubt it will serve you well too.</p>"
